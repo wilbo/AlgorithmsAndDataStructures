@@ -1,10 +1,12 @@
-﻿namespace Sorting
+﻿using System;
+
+namespace Sorting
 {
 	public class BubbleSort : ISort
 	{
-		public int[] Sort()
+		public int[] Sort(int[] list)
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
 	}
 }

@@ -1,15 +1,15 @@
-﻿namespace Datastructures.LinkedList
+﻿namespace Datastructures.Lists.LinkedList
 {
 	public interface ILinkedList<T>
 	{
 		void AddFirst(T data);
-		
+
 		void Clear();
-		
+
 		void Insert(int index, T data);
-		
-		void RemoveFirst();
-		
+
+		T RemoveFirst();
+
 		T GetFirst();
 	}
 }

@@ -2,9 +2,9 @@
 {
 	public class ShellSort : ISort
 	{
-		public int[] Sort()
+		public int[] Sort(int[] list)
 		{
-			throw new System.NotImplementedException();
+			var 
 		}
 	}
 }

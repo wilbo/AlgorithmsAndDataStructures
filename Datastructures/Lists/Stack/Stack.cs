@@ -1,6 +1,6 @@
-﻿using Datastructures.LinkedList;
+﻿using Datastructures.Lists.LinkedList;
 
-namespace Datastructures.Stack
+namespace Datastructures.Lists.Stack
 {
 	public class Stack<T> : IStack<T>
 	{
@@ -36,7 +36,6 @@ namespace Datastructures.Stack
 			while (current != null)
 			{
 				output += current + " | ";
-
 				current = current.Next;
 			}
 

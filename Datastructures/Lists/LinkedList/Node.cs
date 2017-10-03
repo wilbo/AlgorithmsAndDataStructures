@@ -1,15 +1,15 @@
-﻿namespace Datastructures.LinkedList
+﻿namespace Datastructures.Lists.LinkedList
 {
 	public class Node<T>
 	{
-		public T Value;
 		public Node<T> Next;
+		public T Value;
 
 		public Node(T value)
 		{
 			Value = value;
 		}
-		
+
 		public Node(T value, Node<T> next)
 		{
 			Value = value;

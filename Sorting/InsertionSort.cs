@@ -2,27 +2,29 @@
 {
 	public static class InsertionSort
 	{
-		public static int[] Sort(int[] numbers)
-		{			
-			for (var i = 0; i < numbers.Length - 1; i++) {
-				for (var j = i + 1; j > 0; j--) {
-					if (numbers[j] >= numbers[j - 1])
-					{
-						break;
-					}
-
-					Swap(numbers, j, j - 1);
-				}
-			}
-			
-			return numbers;
-		}
-
-		private static void Swap(int[] array, int i, int j)
+		public static int[] Sort(int[] list)
 		{
-			var temp = array[i];
-			array[i] = array[j];
-			array[j] = temp;
+			// Start from index 1 because index 0 is considered sorted 
+			for (var i = 1; i < list.Length; i++)
+			{
+				// The value 'n' to be lowered in the list
+				var n = list[i];
+
+				// Number before 'n' in list is greater than 'n'
+				while (i - 1 >= 0 && list[i - 1] > n)
+				{
+					// Lift the larger number up
+					list[i] = list[i - 1];
+
+					// Reiterate lower in the list (if while statement complies)
+					i--;
+				}
+
+				// put 'n' on its sorted position
+				list[i] = n;
+			}
+
+			return list;
 		}
 	}
 }
