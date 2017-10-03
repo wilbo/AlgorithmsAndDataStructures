@@ -19,43 +19,45 @@ namespace Datastructures.Lists.LinkedList
 			Count = 1;
 		}
 		
-		public void Add(T data)
+		public void AddLast(T data)
 		{
-			Count++;
-			
 			if (Start == null)
 			{
 				Start = new Node<T>(data);
-				return;
+			}
+			else
+			{
+				var current = Start;
+	
+				while (current != null)
+				{
+					if (current.Next == null)
+					{
+						current.Next = new Node<T>(data);
+						break;
+					}
+	
+					current = current.Next;
+				}
 			}
 			
-			var current = Start;
-
-			while (current != null)
-			{
-				if (current.Next == null)
-				{
-					current.Next = new Node<T>(data);
-					break;
-				}
-
-				current = current.Next;
-			}
+			Count++;
 		}
 
 		public void AddFirst(T data)
 		{
-			Count++;
-			
 			if (Start == null)
 			{
 				Start = new Node<T>(data);
-				return;
+			}
+			else
+			{
+				var node = new Node<T>(data, Start);
+				node.Next = Start;
+				Start = node;	
 			}
 			
-			var node = new Node<T>(data, Start);
-			node.Next = Start;
-			Start = node;
+			Count++;			
 		}
 
 		public void Clear()
@@ -94,8 +96,31 @@ namespace Datastructures.Lists.LinkedList
 		{
 			var removed = Start;
 			Start = Start.Next;
+			
 			Count--;
+			
 			return removed.Value;
+		}
+
+		public T RemoveLast()
+		{
+			var current = Start;
+			var node = new Node<T>();
+
+			while (current != null)
+			{
+				if (current.Next == null)
+				{
+					node = current;
+					current = null;
+					Count--;
+					break;
+				}
+				
+				current = current.Next;
+			}
+
+			return node.Value;
 		}
 
 		public T GetFirst()
