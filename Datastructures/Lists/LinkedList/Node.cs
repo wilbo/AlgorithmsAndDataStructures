@@ -12,12 +12,6 @@
 			Value = value;
 		}
 
-		public Node(T value, Node<T> next)
-		{
-			Value = value;
-			Next = next;
-		}
-
 		public override string ToString()
 		{
 			return Value.ToString();

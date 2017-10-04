@@ -38,7 +38,9 @@ namespace Datastructures
 			myList.Insert(1, 222);
 			myList.Insert(4, 889);
 			myList.RemoveFirst();
-			Console.WriteLine(myList + " count: " + myList.Count);
+			Console.WriteLine("Last value: " + myList.Last);
+			Console.WriteLine("Count: " + myList.Count);
+			Console.WriteLine(myList);
 			Console.WriteLine("--------------------------------------------------------------");
 			
 			Console.WriteLine("");

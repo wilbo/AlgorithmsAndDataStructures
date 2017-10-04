@@ -4,24 +4,34 @@ namespace Datastructures.Lists.LinkedList
 {
 	public class LinkedList<T> : ILinkedList<T>
 	{
-		private Node<T> _start;
-		public int Count { get; private set;}
-		
+		private Node<T> _header;
+		public int Count { get; private set; }
+
 		public LinkedList()
 		{
-			_start = null;
-			Count = 0;
+			Clear();
 		}
 
-		public T First => _start.Value;
+		public T First
+		{
+			get
+			{
+				if (_header.Next == null)
+				{
+					throw new NullReferenceException();
+				}
+				
+				return _header.Next.Value;		
+			}
+		}
 
 		public T Last
 		{
 			get
 			{
-				var current = _start;
+				var current = _header;
 				var last = new Node<T>();
-				
+
 				while (current != null)
 				{
 					if (current.Next == null)
@@ -32,47 +42,32 @@ namespace Datastructures.Lists.LinkedList
 
 					current = current.Next;
 				}
-				
+
 				return last.Value;
 			}
 		}
-		
+
 		public void AddFirst(T data)
 		{
-			if (_start == null)
-			{
-				_start = new Node<T>(data);
-			}
-			else
-			{
-				var node = new Node<T>(data, _start);
-				node.Next = _start;
-				_start = node;
-			}
-
+			var node = new Node<T>(data);
+			node.Next = _header.Next;
+			_header.Next = node;
 			Count++;
 		}
 
 		public void AddLast(T data)
 		{
-			if (_start == null)
-			{
-				_start = new Node<T>(data);
-			}
-			else
-			{
-				var current = _start;
+			var current = _header;
 
-				while (current != null)
+			while (current != null)
+			{
+				if (current.Next == null)
 				{
-					if (current.Next == null)
-					{
-						current.Next = new Node<T>(data);
-						break;
-					}
-
-					current = current.Next;
+					current.Next = new Node<T>(data);
+					break;
 				}
+
+				current = current.Next;
 			}
 
 			Count++;
@@ -80,7 +75,7 @@ namespace Datastructures.Lists.LinkedList
 
 		public void Clear()
 		{
-			_start = null;
+			_header = new Node<T>();
 			Count = 0;
 		}
 
@@ -92,7 +87,7 @@ namespace Datastructures.Lists.LinkedList
 			}
 
 			var node = new Node<T>(data);
-			var current = _start;
+			var current = _header.Next;
 			var cycle = 1;
 
 			while (current != null)
@@ -112,21 +107,27 @@ namespace Datastructures.Lists.LinkedList
 
 		public void RemoveFirst()
 		{
-			_start = _start.Next;
+			if (_header.Next == null)
+			{
+				throw new NullReferenceException();
+			}
+
+			var temp = _header.Next.Next;
+			_header.Next = temp;
 			Count--;
 		}
 
 		public override string ToString()
 		{
 			var output = "";
-			var node = _start;
+			var node = _header.Next;
 
 			while (node != null)
 			{
-				output += node + " | ";
+				output += node + ", ";
 				node = node.Next;
 			}
-
+			
 			return output;
 		}
 	}
