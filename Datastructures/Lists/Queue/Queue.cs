@@ -10,39 +10,27 @@ namespace Datastructures.Lists.Queue
 		{
 			_list = new LinkedList<T>();
 		}
-
-		public Queue(T data)
-		{
-			_list = new LinkedList<T>(data);
-		}
 		
 		public void Enqueue(T data)
 		{
-			_list.Add(data);
+			_list.AddLast(data);
 		}
 
 		public T Dequeue()
 		{
-			return _list.RemoveFirst();
+			var first = _list.First;
+			_list.RemoveFirst();
+			return first;
 		}
 
 		public T Peek()
 		{
-			return _list.Start.Value;
+			return _list.First;
 		}
 		
 		public override string ToString()
 		{
-			var output = "";
-			var current = _list.Start;
-
-			while (current != null)
-			{
-				output += current + " | ";
-				current = current.Next;
-			}
-
-			return output;
+			return _list.ToString();
 		}
 	}
 }

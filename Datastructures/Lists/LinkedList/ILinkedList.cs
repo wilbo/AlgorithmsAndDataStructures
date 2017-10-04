@@ -2,6 +2,10 @@
 {
 	public interface ILinkedList<T>
 	{
+		T First { get; }
+
+		T Last { get; }
+		
 		void AddFirst(T data);
 		
 		void AddLast(T data);
@@ -10,10 +14,6 @@
 
 		void Insert(int index, T data);
 
-		T RemoveFirst();
-		
-		T RemoveLast();
-
-		T GetFirst();
+		void RemoveFirst();
 	}
 }

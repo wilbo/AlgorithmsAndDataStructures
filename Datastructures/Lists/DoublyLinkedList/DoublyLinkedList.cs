@@ -4,6 +4,9 @@ namespace Datastructures.Lists.DoublyLinkedList
 {
 	public class DoublyLinkedList<T> : ILinkedList<T>
 	{
+		public T First { get; }
+		public T Last { get; }
+
 		public void AddFirst(T data)
 		{
 			throw new System.NotImplementedException();
@@ -24,17 +27,12 @@ namespace Datastructures.Lists.DoublyLinkedList
 			throw new System.NotImplementedException();
 		}
 
-		public T RemoveFirst()
+		public void RemoveFirst()
 		{
 			throw new System.NotImplementedException();
 		}
 
-		public T RemoveLast()
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public T GetFirst()
+		public void RemoveLast()
 		{
 			throw new System.NotImplementedException();
 		}

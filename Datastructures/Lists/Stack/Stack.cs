@@ -6,9 +6,9 @@ namespace Datastructures.Lists.Stack
 	{
 		private readonly LinkedList<T> _list;
 
-		public Stack(T data)
+		public Stack()
 		{
-			_list = new LinkedList<T>(data);
+			_list = new LinkedList<T>();
 		}
 
 		public void Push(T data)
@@ -18,28 +18,19 @@ namespace Datastructures.Lists.Stack
 
 		public T Pop()
 		{
-			var first = _list.GetFirst();
+			var first = _list.First;
 			_list.RemoveFirst();
 			return first;
 		}
 
 		public T Top()
 		{
-			return _list.GetFirst();
+			return _list.First;
 		}
 
 		public override string ToString()
 		{
-			var output = "";
-			var current = _list.Start;
-
-			while (current != null)
-			{
-				output += current + " | ";
-				current = current.Next;
-			}
-
-			return output;
+			return _list.ToString();
 		}
 	}
 }
