@@ -1,10 +1,12 @@
-﻿namespace Sorting
+﻿using System;
+
+namespace Sorting
 {
 	public class ShellSort : ISort
 	{
 		public int[] Sort(int[] list)
 		{
-			var 
+			throw new NotImplementedException();
 		}
 	}
 }

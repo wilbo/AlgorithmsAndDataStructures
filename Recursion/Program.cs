@@ -1,12 +1,17 @@
 ﻿using System;
+using Gdk;
+using Gtk;
 
 namespace Recursion
 {
-	internal class Program
+	class Program
 	{
-		private static void Main(string[] args)
+		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			Application.Init();
+			var window = new Window(800, 600);
+			window.Show();
+			Application.Run();
 		}
 	}
 }
