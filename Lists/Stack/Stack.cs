@@ -1,6 +1,6 @@
-﻿using Datastructures.Lists.LinkedList;
+﻿using Lists.LinkedList;
 
-namespace Datastructures.Lists.Stack
+namespace Lists.Stack
 {
 	public class Stack<T> : IStack<T>
 	{

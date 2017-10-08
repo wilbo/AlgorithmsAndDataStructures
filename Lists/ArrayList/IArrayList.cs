@@ -1,4 +1,4 @@
-﻿namespace Datastructures.Lists.ArrayList
+﻿namespace Lists.ArrayList
 {
 	public interface IArrayList<T>
 	{

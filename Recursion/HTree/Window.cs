@@ -3,7 +3,7 @@ using Gdk;
 using Gtk;
 using WindowType = Gtk.WindowType;
 
-namespace Recursion
+namespace Recursion.HTree
 {
 	public class Window : Gtk.Window
 	{
@@ -24,14 +24,14 @@ namespace Recursion
 			// Define the drawing context
 			_context = new Gdk.GC(GdkWindow) {RgbFgColor = new Color(255, 0, 0)};
 
-			// Amount of 
+			// Number of levels deep
 			const int depth = 4;
 			// Size of H at start
 			var size = DefaultSize.Width / 3;
 			
 			// Start position
-			var x = DefaultSize.Width / 2; // x center
-			var y = DefaultSize.Height / 2; // y center
+			var x = DefaultSize.Width / 2; // x center of window
+			var y = DefaultSize.Height / 2; // y center of window
 			
 			// Start drawing
 			Draw(depth, x, y, size);
@@ -46,7 +46,7 @@ namespace Recursion
 			// Draw a H
 			DrawH(x, y, size);
 
-			// Calculate new positions next for H's
+			// Calculate positions for next H's
 			var x0 = x - size / 2;
 			var x1 = x + size / 2;
 			var y0 = y - size / 2;

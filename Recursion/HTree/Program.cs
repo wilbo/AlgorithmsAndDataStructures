@@ -1,8 +1,6 @@
-﻿using System;
-using Gdk;
-using Gtk;
+﻿using Gtk;
 
-namespace Recursion
+namespace Recursion.HTree
 {
 	class Program
 	{

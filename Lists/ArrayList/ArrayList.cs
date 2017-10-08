@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Datastructures.Lists.ArrayList
+namespace Lists.ArrayList
 {
 	public class ArrayList<T> : IArrayList<T>
 	{

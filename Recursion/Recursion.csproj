@@ -41,16 +41,16 @@
     <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
-    </EmbeddedResource>
+    <Compile Include="HTree\gtk-gui\generated.cs" />
+    <Compile Include="HTree\gtk-gui\MainWindow.cs" />
+    <Compile Include="HTree\Program.cs" />
+    <Compile Include="HTree\Properties\AssemblyInfo.cs" />
+    <Compile Include="HTree\Window.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="Window.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HTree\gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

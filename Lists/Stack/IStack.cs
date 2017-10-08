@@ -1,4 +1,4 @@
-﻿namespace Datastructures.Lists.Stack
+﻿namespace Lists.Stack
 {
 	public interface IStack<T>
 	{

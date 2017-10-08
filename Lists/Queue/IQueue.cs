@@ -1,4 +1,4 @@
-﻿namespace Datastructures.Lists.Queue
+﻿namespace Lists.Queue
 {
 	public interface IQueue<T>
 	{

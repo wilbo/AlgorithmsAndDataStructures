@@ -1,6 +1,6 @@
-﻿using Datastructures.Lists.LinkedList;
+﻿using Lists.LinkedList;
 
-namespace Datastructures.Lists.Queue
+namespace Lists.Queue
 {
 	public class Queue<T> : IQueue<T>
 	{
