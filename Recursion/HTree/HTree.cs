@@ -5,11 +5,11 @@ using WindowType = Gtk.WindowType;
 
 namespace Recursion.HTree
 {
-	public class Window : Gtk.Window
+	public class HTree : Gtk.Window
 	{
 		private Gdk.GC _context;
 		
-		public Window(int height, int width) : base(WindowType.Toplevel)
+		public HTree(int height, int width) : base(WindowType.Toplevel)
 		{			
 			SetDefaultSize(height, width);
 			Title = "Recursion Drawing";

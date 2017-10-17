@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stetic {
+namespace Recursion.HTree {
     
     
     internal class Gui {
@@ -18,15 +18,15 @@ namespace Stetic {
 #pragma warning disable 436
         
         public static void Build(object cobj, System.Type type) {
-            global::Stetic.Gui.Build(cobj, type.FullName);
+            global::Recursion.HTree.Gui.Build(cobj, type.FullName);
         }
         
         public static void Build(object cobj, string id) {
         }
         
         internal static void Initialize(Gtk.Widget iconRenderer) {
-            if ((Stetic.Gui.initialized == false)) {
-                Stetic.Gui.initialized = true;
+            if ((Gui.initialized == false)) {
+                Gui.initialized = true;
             }
         }
     }
@@ -34,7 +34,7 @@ namespace Stetic {
     internal class ActionGroups {
         
         public static Gtk.ActionGroup GetActionGroup(System.Type type) {
-            return Stetic.ActionGroups.GetActionGroup(type.FullName);
+            return ActionGroups.GetActionGroup(type.FullName);
         }
         
         public static Gtk.ActionGroup GetActionGroup(string name) {

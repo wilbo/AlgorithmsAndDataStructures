@@ -12,13 +12,15 @@ namespace Sorting
 			PrintNumbers(InsertionSort.Sort(numbers));
 		}
 
-		public static void PrintNumbers(int[] numbers)
+		private static void PrintNumbers(int[] numbers)
 		{
 			var output = "";
 
-			for (var i = 0; i < numbers.Length; i++)
-				output += " " + numbers[i];
-
+			foreach (var t in numbers)
+			{
+				output += " " + t;
+			}
+			
 			Console.WriteLine(output);
 		}
 	}

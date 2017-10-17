@@ -1,4 +1,4 @@
-﻿namespace Datastructures.Trees.AVLTree
+﻿namespace Trees.AVLTree
 {
 	public class AVLTree
 	{

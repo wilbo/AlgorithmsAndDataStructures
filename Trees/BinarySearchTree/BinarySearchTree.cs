@@ -1,4 +1,4 @@
-﻿namespace Datastructures.Trees.BinarySearchTree
+﻿namespace Trees.BinarySearchTree
 {
 	public class BinarySearchTree
 	{
