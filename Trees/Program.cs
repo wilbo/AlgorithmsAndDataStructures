@@ -104,7 +104,7 @@ namespace Trees
 			// Binary MinHeap
 
 			Console.WriteLine("Binary MinHeap:");
-			var myBinaryHeap = new BinaryMinMinHeap();
+			var myBinaryHeap = new BinaryMinHeap.BinaryMinHeap();
 			myBinaryHeap.Insert(2);
 			myBinaryHeap.Insert(10);
 			myBinaryHeap.Insert(8);
