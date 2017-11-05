@@ -27,19 +27,19 @@ namespace Lists
 
 			Console.WriteLine("");
 			Console.WriteLine("LinkedList:");
-			var myList = new LinkedList<int>();
-			myList.AddFirst(4);
-			myList.Clear();
-			myList.AddFirst(7);
-			myList.AddLast(19);
-			myList.AddLast(55);
-			myList.AddLast(3);
-			myList.Insert(1, 222);
-			myList.Insert(4, 889);
-			myList.RemoveFirst();
-			Console.WriteLine("Last value: " + myList.Last);
-			Console.WriteLine("Count: " + myList.Count);
-			Console.WriteLine(myList);
+			var myLinkedList = new LinkedList<int>();
+			myLinkedList.AddFirst(4);
+			myLinkedList.Clear();
+			myLinkedList.AddFirst(7);
+			myLinkedList.AddLast(19);
+			myLinkedList.AddLast(55);
+			myLinkedList.AddLast(3);
+			myLinkedList.Insert(1, 222);
+			myLinkedList.Insert(4, 889);
+			myLinkedList.RemoveFirst();
+			Console.WriteLine("Last value: " + myLinkedList.Last);
+			Console.WriteLine("Count: " + myLinkedList.Count);
+			Console.WriteLine(myLinkedList);
 			Console.WriteLine("--------------------------------------------------------------");
 			
 			Console.WriteLine("");

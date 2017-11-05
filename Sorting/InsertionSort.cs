@@ -2,6 +2,9 @@
 {
 	public static class InsertionSort
 	{
+		
+		// Reference: https://en.wikipedia.org/wiki/Insertion_sort
+		
 		public static int[] Sort(int[] list)
 		{
 			// Start from index 1 because index 0 is considered sorted 

@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVLTree\AVLTree.cs" />
     <Compile Include="BinarySearchTree\BinarySearchTree.cs" />
+    <Compile Include="BinarySearchTree\IBinarySearchTree.cs" />
+    <Compile Include="BinarySearchTree\BinaryNode.cs" />
+    <Compile Include="BinaryTree\BinaryNode.cs" />
+    <Compile Include="BinaryTree\BinaryTree.cs" />
+    <Compile Include="BinaryTree\IBinaryTree.cs" />
+    <Compile Include="FCNSTree\FCNSNode.cs" />
+    <Compile Include="FCNSTree\FCNSTree.cs" />
+    <Compile Include="FCNSTree\IFCNSTree.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

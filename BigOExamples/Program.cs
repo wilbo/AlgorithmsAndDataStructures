@@ -15,7 +15,7 @@ namespace BigOExamples
 		// Logarithms: https://en.wikipedia.org/wiki/Logarithm
 
 
-		// O(1) 
+		// O(1) or O(C)
 		// Describes an algorithm that will always execute in the same time (or space) regardless of the size of the 
 		// input data set.
 
@@ -38,25 +38,27 @@ namespace BigOExamples
 		}
 
 
-		// O(N2)
+		// O(N^2)
 		// Describes an algorithm whose performance is directly proportional to the square of the size of the input
 		// data set. Deeper nested iterations will result in O(N3), O(N4) etc.
 
 		private static bool ContainsDuplicates(List<string> elements)
 		{
 			for (var outer = 0; outer < elements.Count; outer++)
-			for (var inner = 0; inner < elements.Count; inner++)
 			{
-				// Don't compare with self
-				if (outer == inner) continue;
-
-				if (elements[outer] == elements[inner]) return true;
+				for (var inner = 0; inner < elements.Count; inner++)
+				{
+					// Don't compare with self
+					if (outer == inner) continue;
+					
+					if (elements[outer] == elements[inner]) return true;
+				}		
 			}
 
 			return false;
 		}
-
-
+	
+		
 		// O(2^N)
 		// Describes an algorithm whose growth doubles with each additon to the input data set. 
 

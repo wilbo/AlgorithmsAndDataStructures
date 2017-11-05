@@ -5,22 +5,34 @@ namespace Lists.LinkedList
 	public class LinkedList<T> : ILinkedList<T>
 	{
 		private Node<T> _header;
-		public int Count { get; private set; }
 
 		public LinkedList()
 		{
 			Clear();
+		}
+		
+		public int Count
+		{
+			get
+			{
+				var current = _header.Next;
+				var count = 0;
+				
+				while (current != null)
+				{
+					count++;	
+					current = current.Next;
+				}
+
+				return count;
+			}
 		}
 
 		public T First
 		{
 			get
 			{
-				if (_header.Next == null)
-				{
-					throw new NullReferenceException();
-				}
-				
+				if (_header.Next == null) throw new NullReferenceException();
 				return _header.Next.Value;		
 			}
 		}
@@ -52,7 +64,6 @@ namespace Lists.LinkedList
 			var node = new Node<T>(data);
 			node.Next = _header.Next;
 			_header.Next = node;
-			Count++;
 		}
 
 		public void AddLast(T data)
@@ -69,14 +80,11 @@ namespace Lists.LinkedList
 
 				current = current.Next;
 			}
-
-			Count++;
 		}
 
 		public void Clear()
 		{
 			_header = new Node<T>();
-			Count = 0;
 		}
 
 		public void Insert(int index, T data)
@@ -96,7 +104,6 @@ namespace Lists.LinkedList
 				{
 					node.Next = current.Next;
 					current.Next = node;
-					Count++;
 					break;
 				}
 
@@ -114,7 +121,6 @@ namespace Lists.LinkedList
 
 			var temp = _header.Next.Next;
 			_header.Next = temp;
-			Count--;
 		}
 
 		public override string ToString()

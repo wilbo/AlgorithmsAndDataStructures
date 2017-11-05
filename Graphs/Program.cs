@@ -20,7 +20,7 @@ namespace Graphs
 			myGraph.AddEdge("V3", "V5", 8);
 			myGraph.AddEdge("V3", "V2", 2);
 			myGraph.AddEdge("V4", "V6", 6);
-			myGraph.AddEdge("V6", "V5", 1);		
+			myGraph.AddEdge("V6", "V5", 1);
 			
 			Console.WriteLine("Unweighted: ");
 			Unweighted.Calculate(myGraph, "V1");

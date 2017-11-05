@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using Graphs.AdjacencyList;
 using Wintellect.PowerCollections;
 
@@ -27,7 +26,7 @@ namespace Graphs.Algorithms
 			while (pq.Count > 0 && nodesSeen < graph.VertexMap.Count)
 			{
 				var vrec = pq.RemoveFirst();
-				var v = vrec.Dest;
+				var v = vrec.Destination;
 				
 				if (v.Scratch != 0)
 				{
@@ -60,13 +59,13 @@ namespace Graphs.Algorithms
 
 	internal class Path : IComparable<Path>
 	{
-		public Vertex Dest;
+		public Vertex Destination;
 		public double Cost;
 	
-		public Path(Vertex d, double c)
+		public Path(Vertex destination, double cost)
 		{
-			Dest = d;
-			Cost = c;
+			Destination = destination;
+			Cost = cost;
 		}
 	
 		public int CompareTo(Path rhs)
