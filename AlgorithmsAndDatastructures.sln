@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees", "Trees\Trees.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs", "Graphs\Graphs.csproj", "{5232AE90-9309-4F2C-9C78-08EEB94A8BCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashing", "Hashing\Hashing.csproj", "{3B79EC32-27A7-4910-A08C-5C19C3521F9B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{5232AE90-9309-4F2C-9C78-08EEB94A8BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5232AE90-9309-4F2C-9C78-08EEB94A8BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5232AE90-9309-4F2C-9C78-08EEB94A8BCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B79EC32-27A7-4910-A08C-5C19C3521F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B79EC32-27A7-4910-A08C-5C19C3521F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B79EC32-27A7-4910-A08C-5C19C3521F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B79EC32-27A7-4910-A08C-5C19C3521F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

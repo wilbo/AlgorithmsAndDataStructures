@@ -2,6 +2,7 @@
 using Trees.BinarySearchTree;
 using Trees.FCNSTree;
 using Trees.BinaryTree;
+using Trees.BinaryHeap;
 
 namespace Trees
 {
@@ -21,7 +22,8 @@ namespace Trees
 			//					|
 			//					K
 			//	
-		
+
+			Console.WriteLine("First Child / Next Sibling Tree:");
 			var myFCNSTree = new FCNSTree<char>('A');
 			myFCNSTree.Root.AddChild('B').AddChild('F').AddSibling('G');
 			myFCNSTree.Root.AddChild('C');
@@ -31,6 +33,7 @@ namespace Trees
 			Console.WriteLine(myFCNSTree.Root); // A
 			Console.WriteLine(myFCNSTree.Root.FirstChild); // B
 			Console.WriteLine(myFCNSTree.Root.FirstChild.NextSibling.NextSibling.FirstChild); // H
+			Console.WriteLine("--------------------------------------------------------------");
 			
 			
 			// Binary Tree
@@ -44,6 +47,7 @@ namespace Trees
 			//	1	3
 			//
 
+			Console.WriteLine("Binary Tree:");
 			var myBinaryTree = new BinaryTree<int>(4);
 			myBinaryTree.Root.AddLeftChild(2);
 			myBinaryTree.Root.AddRightChild(6);
@@ -62,7 +66,8 @@ namespace Trees
 			newTree.Root.AddRightChild(6);
 			
 			myBinaryTree.Merge(12, myBinaryTree, newTree);
-			Console.WriteLine(myBinaryTree);
+			Console.WriteLine("PrettyPrint: "+ myBinaryTree);
+			Console.WriteLine("--------------------------------------------------------------");
 			
 			
 			// Binary Search Tree
@@ -75,7 +80,8 @@ namespace Trees
 			//   / \
 			//	2	5
 			//
-			
+
+			Console.WriteLine("Binary Search Tree:");
 			var myBinarySearchTree = new BinarySearchTree.BinarySearchTree(6);
 			myBinarySearchTree.Insert(4);
 			myBinarySearchTree.Insert(7);
@@ -84,7 +90,7 @@ namespace Trees
 			
 			Console.WriteLine("InOrder: " + myBinarySearchTree.InOrder());
 
-			Console.WriteLine("RemoveMin");
+			Console.WriteLine("RemoveMin()");
 			myBinarySearchTree.Remove(2);
 
 			Console.WriteLine("InOrder: " + myBinarySearchTree.InOrder());
@@ -93,6 +99,36 @@ namespace Trees
 			Console.WriteLine("FindMax: " + myBinarySearchTree.FindMax());
 			
 			Console.WriteLine("PrettyPrint: " + myBinarySearchTree);
+			Console.WriteLine("--------------------------------------------------------------");
+			
+			// Binary Heap
+
+			Console.WriteLine("Binary Heap:");
+			var myBinaryHeap = new BinaryHeap.BinaryHeap();
+			myBinaryHeap.Insert(2);
+			myBinaryHeap.Insert(10);
+			myBinaryHeap.Insert(8);
+			myBinaryHeap.Insert(1);
+			myBinaryHeap.Insert(6);
+			myBinaryHeap.Insert(9);
+			
+			Console.WriteLine("Heap: " + myBinaryHeap);
+			
+			Console.WriteLine("Value: " + myBinaryHeap.Value);
+			
+			Console.WriteLine("Removed: " + myBinaryHeap.Remove());
+			Console.WriteLine("Removed: " + myBinaryHeap.Remove());
+			
+			Console.WriteLine("Value: " + myBinaryHeap.Value);
+			
+			Console.WriteLine("Removed: " + myBinaryHeap.Remove());
+			Console.WriteLine("Removed: " + myBinaryHeap.Remove());
+			
+			Console.WriteLine("Value: " + myBinaryHeap.Value);
+			
+			Console.WriteLine("Heap: " + myBinaryHeap);
+			Console.WriteLine("--------------------------------------------------------------");
+			
 		}
 	}
 }

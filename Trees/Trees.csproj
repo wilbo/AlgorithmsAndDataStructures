@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryHeap\BinaryHeap.cs" />
+    <Compile Include="BinaryHeap\IBinaryHeap.cs" />
     <Compile Include="BinarySearchTree\BinarySearchTree.cs" />
     <Compile Include="BinarySearchTree\IBinarySearchTree.cs" />
     <Compile Include="BinarySearchTree\BinaryNode.cs" />

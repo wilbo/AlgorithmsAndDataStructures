@@ -170,7 +170,7 @@ namespace Trees.BinarySearchTree
 		{
 			if (current == null)
 			{
-				return "NULL";
+				return "null";
 			}
 
 			var output = "";
