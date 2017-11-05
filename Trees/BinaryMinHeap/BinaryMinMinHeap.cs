@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace Trees.BinaryHeap
+﻿namespace Trees.BinaryMinHeap
 {
-	public class BinaryHeap : IBinaryHeap
+	public class BinaryMinMinHeap : IBinaryMinHeap
 	{
 		private readonly int[] _array;
 		public int CurrentSize;
 
-		public BinaryHeap()
+		public BinaryMinMinHeap()
 		{
 			_array = new int[33];
 			CurrentSize = 0;

@@ -1,6 +1,6 @@
-﻿namespace Trees.BinaryHeap
+﻿namespace Trees.BinaryMinHeap
 {
-	public interface IBinaryHeap
+	public interface IBinaryMinHeap
 	{		
 		void Insert(int value);
 

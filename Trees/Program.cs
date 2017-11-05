@@ -1,8 +1,8 @@
 ﻿using System;
+using Trees.BinaryMinHeap;
 using Trees.BinarySearchTree;
 using Trees.FCNSTree;
 using Trees.BinaryTree;
-using Trees.BinaryHeap;
 
 namespace Trees
 {
@@ -101,10 +101,10 @@ namespace Trees
 			Console.WriteLine("PrettyPrint: " + myBinarySearchTree);
 			Console.WriteLine("--------------------------------------------------------------");
 			
-			// Binary Heap
+			// Binary MinHeap
 
-			Console.WriteLine("Binary Heap:");
-			var myBinaryHeap = new BinaryHeap.BinaryHeap();
+			Console.WriteLine("Binary MinHeap:");
+			var myBinaryHeap = new BinaryMinMinHeap();
 			myBinaryHeap.Insert(2);
 			myBinaryHeap.Insert(10);
 			myBinaryHeap.Insert(8);
