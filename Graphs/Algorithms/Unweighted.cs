@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Graphs.AdjacencyList;
 
-namespace Graphs.AdjacencyList
+namespace Graphs.Algorithms
 {
 	public static class Unweighted
 	{
